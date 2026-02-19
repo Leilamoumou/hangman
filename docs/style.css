@@ -14,7 +14,7 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background: linear-gradient(45deg, #38252b, #556270);
+  background: linear-gradient(45deg, #ff8db1, #bbdcff);
   padding: 0 10px;
 }
 
@@ -37,8 +37,8 @@ body {
   padding: 12px 20px;
   background-color: #5a6175;
   border-radius: 20px;
-  color: #ffffff;
-  box-shadow: 0 0 20px linear-gradient(45deg, #ff79a4, #7dbcff);
+  color:  #15a2a7;
+  box-shadow: 0 0 20px,  #7dbcff);
 }
 
 #timer-display {
@@ -156,7 +156,7 @@ body {
 }
 
 .game-modal .content {
-  background: #b2d7b2;
+  background: #2a732a;
   max-width: 420px;
   width: 50%;
   text-align: center;
