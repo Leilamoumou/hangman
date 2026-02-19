@@ -193,10 +193,10 @@ document.addEventListener("keydown", (e) => {
      const pressedKey = e.key.toLowerCase();
     // find the button where innerText matches pressedKey
     // then call initGame with that button and the letter
-    Array.from(keyboardDiv.querySelectorAll("button")).find(btn => btn.innerText.toLowerCase() === pressedKey);
+    const BTN = Array.from(keyboardDiv.querySelectorAll("button")).find(btn => btn.innerText.toLowerCase() === pressedKey);
     //if button is on, not disabled,
-    if (button && !button.disabled) {
+    if (BTN && !BTN.disabled) {
 //continue the game.
-    initGame(button, pressedKey);
+    initGame(BTN, pressedKey);
 }
 });
