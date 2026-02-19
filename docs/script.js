@@ -184,3 +184,19 @@ for (let i = 97; i <= 122; i++) {
 }
 getRandomWord();
 playAgainBtn.addEventListener("click", getRandomWord);
+//keyboard implementation, press for keys- LM
+document.addEventListener("keydown", (e) => {
+    // e.key will give you the letter pressed
+   // e.key
+    //query for the button whose text matches the key pressed:
+  //  document.querySelector(`button`)
+     const pressedKey = e.key.toLowerCase();
+    // find the button where innerText matches pressedKey
+    // then call initGame with that button and the letter
+    Array.from(keyboardDiv.querySelectorAll("button")).find(btn => btn.innerText.toLowerCase() === pressedKey);
+    //if button is on, not disabled,
+    if (button && !button.disabled) {
+//continue the game.
+    initGame(button, pressedKey);
+}
+});
