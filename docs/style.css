@@ -2,15 +2,18 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Times New Roman", Times, serif;
+  font-family: "Fantasy";
 }
 
+.title{
+  color: #408e46;
+}
 body {
   display: flex;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background: linear-gradient(45deg, #408e46, #556270);
+  background: linear-gradient(45deg, #38252b, #556270);
   padding: 0 10px;
 }
 
@@ -39,7 +42,7 @@ body {
 
 #timer-display {
   font-weight: bold;
-  color: #ff7e67;
+  color: #15a2a7;
 }
 
 .hangman-box canvas {

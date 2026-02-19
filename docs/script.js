@@ -126,8 +126,8 @@ const gameOver = (isVictory) => {
   setTimeout(() => {
     clearInterval(timerInterval);
     const modalText = isVictory
-      ? ` Yeah! You found the word:`
-      : `You Loss! The correct word was:`;
+      ? `NICE ಠ‿↼! You found the word:`
+      : `LOSERRR (¬‿¬) ! The correct word was:`;
     gameModal.querySelector(
       "p"
     ).innerHTML = 
