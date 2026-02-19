@@ -2,8 +2,8 @@ const wordDisplay =
     document.querySelector(".word-display");
 const keyboardDiv = 
     document.querySelector(".keyboard");
-const hangmanImage = 
-    document.querySelector(".hangman-box img");
+const canvas = document.querySelector("canvas");
+const ctx = canvas.getContext("2d");
 const guessesText = 
     document.querySelector(".guesses-text b");
 const gameModal = 
@@ -64,8 +64,8 @@ const resetGame = () => {
   //Resetting all game variables and UI elements
   correctLetters = [];
   wrongGuessCount = 0;
-  hangmanImage.src = 
-  `https://media.geeksforgeeks.org//wp-content/uploads/20240215173028/0.png`;
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  drawGallows();
   guessesText.innerText = `${wrongGuessCount} / ${maxGuesses}`;
   keyboardDiv
     .querySelectorAll("button")
@@ -128,32 +128,10 @@ const initGame = (button, clickedLetter) => {
         .classList.add("guessed");
       }
     });
-  } else {
+  }
+   else {
     wrongGuessCount++;
-    if (wrongGuessCount === 0) {
-      drawHangman(wrongGuessCount);
-    }
-    if (wrongGuessCount === 1) {
-     drawHangman(wrongGuessCount);
-    }
-    if (wrongGuessCount === 2) {
-     drawHangman(wrongGuessCount);
-    }
-    if (wrongGuessCount === 3) {
-      drawHangman(wrongGuessCount);
-    }
-    if (wrongGuessCount == 4) {
-      drawHangman(wrongGuessCount);
-    }
-    if (wrongGuessCount === 5) {
-      hangmanImage.src = 
-      drawHangman(wrongGuessCount);
-    }
-    if (wrongGuessCount === 6) {
-     drawHangman(wrongGuessCount);
-    }
-    // hangmanImage.src = ???
-    `images/hangman-${wrongGuessCount}.svg`;
+    drawHangman(wrongGuessCount);
   }
 
   button.disabled = true;
@@ -196,8 +174,6 @@ document.addEventListener("keydown", (e) => {
 }
 });
 //drawing the hangman as you go
-const canvas = document.querySelector("canvas");
-const ctx = canvas.getContext("2d");
 
 const drawParts = [
     () => { /* draw head (circle) */ 
@@ -212,10 +188,34 @@ const drawParts = [
       ctx.lineTo(100, 150); // draws down
       ctx.stroke();
      },
-    () => { /* draw left arm (line) */ },
-    () => { /* draw right arm (line) */ },
-    () => { /* draw left leg (line) */ },
-    () => { /* draw right leg (line) */ },
+
+    () => { /* draw left arm (line) */
+      //indicating not following past one.
+       ctx.beginPath();
+       ctx.moveTo(100, 100);
+       ctx.lineTo(50, 100);
+       ctx.stroke();
+     },
+    () => { /* draw right arm (line) */
+       ctx.beginPath();
+       ctx.moveTo(100, 100);
+       ctx.lineTo(150, 100);
+       ctx.stroke();
+     },
+    () => { /* draw left leg (line) */ 
+
+      ctx.beginPath();
+       ctx.moveTo(100, 150);
+       ctx.lineTo(50, 220);
+       ctx.stroke();
+    },
+    () => { /* draw right leg (line) */ 
+
+      ctx.beginPath();
+       ctx.moveTo(100, 150);
+       ctx.lineTo(150, 220);
+       ctx.stroke();
+    },
 ];
 const drawHangman = (step) => {
     drawParts[step - 1]();
