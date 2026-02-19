@@ -12,23 +12,7 @@ const playAgainBtn =
     document.querySelector(".play-again");
 const timerDisplay = 
     document.querySelector(".timer");
-//drawGALLOWS
-const drawGallows = () => {
-    ctx.beginPath();
-    // base
-    ctx.moveTo(10, 240);
-    ctx.lineTo(190, 240);
-    // vertical pole
-    ctx.moveTo(50, 240);
-    ctx.lineTo(50, 10);
-    // horizontal beam
-    ctx.moveTo(50, 10);
-    ctx.lineTo(100, 10);
-    // rope
-    ctx.moveTo(100, 10);
-    ctx.lineTo(100, 30);
-    ctx.stroke();
-};
+
 const codingQuiz = [
   {
     word: "variable",
@@ -76,7 +60,24 @@ let currentWord, correctLetters, wrongGuessCount, timerInterval;
 const maxGuesses = 6;
 const gameTimeLimit = 60;
 
-
+//
+//drawGALLOWS
+const drawGallows = () => {
+    ctx.beginPath();
+    // base
+    ctx.moveTo(10, 240);
+    ctx.lineTo(190, 240);
+    // vertical pole
+    ctx.moveTo(50, 240);
+    ctx.lineTo(50, 10);
+    // horizontal beam
+    ctx.moveTo(50, 10);
+    ctx.lineTo(100, 10);
+    // rope
+    ctx.moveTo(100, 10);
+    ctx.lineTo(100, 30);
+    ctx.stroke();
+};
 const resetGame = () => {
   //Resetting all game variables and UI elements
   correctLetters = [];
