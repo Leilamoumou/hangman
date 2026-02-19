@@ -186,6 +186,8 @@ getRandomWord();
 playAgainBtn.addEventListener("click", getRandomWord);
 //keyboard implementation, press for keys- LM
 document.addEventListener("keydown", (e) => {
+  if (e.key.length !== 1 || !e.key.match(/[a-z]/i)) return;
+
     // e.key will give you the letter pressed
    // e.key
     //query for the button whose text matches the key pressed:
