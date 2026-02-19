@@ -42,8 +42,8 @@ body {
   color: #ff7e67;
 }
 
-.hangman-box img {
-  max-width: 270px;
+.hangman-box canvas {
+    max-width: 270px;
 }
 
 .hangman-box h1 {
