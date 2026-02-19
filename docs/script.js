@@ -58,7 +58,7 @@ const codingQuiz = [
 
 let currentWord, correctLetters, wrongGuessCount, timerInterval;
 const maxGuesses = 6;
-const gameTimeLimit = 30;
+const gameTimeLimit = 60;
 
 const resetGame = () => {
   //Resetting all game variables and UI elements
@@ -131,35 +131,28 @@ const initGame = (button, clickedLetter) => {
   } else {
     wrongGuessCount++;
     if (wrongGuessCount === 0) {
-      hangmanImage.src = 
-      `https://media.geeksforgeeks.org//wp-content/uploads/20240215173028/0.png`;
+      drawHangman(wrongGuessCount);
     }
     if (wrongGuessCount === 1) {
-      hangmanImage.src = 
-      `https://media.geeksforgeeks.org//wp-content/uploads/20240215173033/1.png`;
+     drawHangman(wrongGuessCount);
     }
     if (wrongGuessCount === 2) {
-      hangmanImage.src = 
-      
-      `https://media.geeksforgeeks.org//wp-content/uploads/20240215173038/2.png`;
+     drawHangman(wrongGuessCount);
     }
     if (wrongGuessCount === 3) {
-      hangmanImage.src = 
-      `https://media.geeksforgeeks.org//wp-content/uploads/20240215172733/3.png`;
+      drawHangman(wrongGuessCount);
     }
     if (wrongGuessCount == 4) {
-      hangmanImage.src = 
-      `https://media.geeksforgeeks.org//wp-content/uploads/20240215173815/4.png`;
+      drawHangman(wrongGuessCount);
     }
     if (wrongGuessCount === 5) {
       hangmanImage.src = 
-      `https://media.geeksforgeeks.org//wp-content/uploads/20240215173859/5.png`;
+      drawHangman(wrongGuessCount);
     }
     if (wrongGuessCount === 6) {
-      hangmanImage.src =
-      `https://media.geeksforgeeks.org//wp-content/uploads/20240215173931/6.png`;
+     drawHangman(wrongGuessCount);
     }
-    // hangmanImage.src = 
+    // hangmanImage.src = ???
     `images/hangman-${wrongGuessCount}.svg`;
   }
 
@@ -202,3 +195,28 @@ document.addEventListener("keydown", (e) => {
     initGame(BTN, pressedKey);
 }
 });
+//drawing the hangman as you go
+const canvas = document.querySelector("canvas");
+const ctx = canvas.getContext("2d");
+
+const drawParts = [
+    () => { /* draw head (circle) */ 
+      //start at y=50
+      ctx.beginPath();
+      ctx.arc(100, 50, 20, 0, Math.PI * 2); // centerX, centerY, radius
+      ctx.stroke();
+    },
+    () => { /* draw body (line down) */
+      ctx.beginPath();
+      ctx.moveTo(100, 70); // starting the line below the head position
+      ctx.lineTo(100, 150); // draws down
+      ctx.stroke();
+     },
+    () => { /* draw left arm (line) */ },
+    () => { /* draw right arm (line) */ },
+    () => { /* draw left leg (line) */ },
+    () => { /* draw right leg (line) */ },
+];
+const drawHangman = (step) => {
+    drawParts[step - 1]();
+}
