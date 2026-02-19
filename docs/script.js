@@ -24,23 +24,19 @@ const codingQuiz = [
   },
   {
     word: "loop",
-    hint: "A programming structure that repeats a 
-    sequence of instructions until a specific condition is met.",
+    hint: "A programming structure that repeats a sequence of instructions until a specific condition is met.",
   },
   {
     word: "array",
-    hint: "A data structure that 
-    stores a collection of elements.",
+    hint: "A data structure that stores a collection of elements.",
   },
   {
     word: "boolean",
-    hint: "A data type that can have
-    one of two values, true or false.",
+    hint: "A data type that can have one of two values, true or false.",
   },
   {
     word: "conditional",
-    hint: "A statement that executes a block of
-    code if a specified condition is true.",
+    hint: "A statement that executes a block of code if a specified condition is true.",
   },
   {
     word: "parameter",
@@ -48,18 +44,15 @@ const codingQuiz = [
   },
   {
     word: "algorithm",
-    hint: "A step-by-step procedure 
-    or formula for solving a problem.",
+    hint: "A step-by-step procedure or formula for solving a problem.",
   },
   {
     word: "debugging",
-    hint: "The process of finding and 
-    fixing errors in code.",
+    hint: "The process of finding and  fixing errors in code.",
   },
   {
     word: "syntax",
-    hint: "The rules that govern the structure of
-    statements in a programming language.",
+    hint: "The rules that govern the structure of statements in a programming language.",
   },
 ];
 
@@ -72,8 +65,7 @@ const resetGame = () => {
   correctLetters = [];
   wrongGuessCount = 0;
   hangmanImage.src = 
-  `https://media.geeksforgeeks.org/
-  /wp-content/uploads/20240215173028/0.png`;
+  `https://media.geeksforgeeks.org//wp-content/uploads/20240215173028/0.png`;
   guessesText.innerText = `${wrongGuessCount} / ${maxGuesses}`;
   keyboardDiv
     .querySelectorAll("button")
@@ -140,39 +132,32 @@ const initGame = (button, clickedLetter) => {
     wrongGuessCount++;
     if (wrongGuessCount === 0) {
       hangmanImage.src = 
-      `https://media.geeksforgeeks.org//wp-content
-      /uploads/20240215173028/0.png`;
+      `https://media.geeksforgeeks.org//wp-content/uploads/20240215173028/0.png`;
     }
     if (wrongGuessCount === 1) {
       hangmanImage.src = 
-      `https://media.geeksforgeeks.org//wp-content
-      /uploads/20240215173033/1.png`;
+      `https://media.geeksforgeeks.org//wp-content/uploads/20240215173033/1.png`;
     }
     if (wrongGuessCount === 2) {
       hangmanImage.src = 
       
-      `https://media.geeksforgeeks.org//wp-content
-      /uploads/20240215173038/2.png`;
+      `https://media.geeksforgeeks.org//wp-content/uploads/20240215173038/2.png`;
     }
     if (wrongGuessCount === 3) {
       hangmanImage.src = 
-      `https://media.geeksforgeeks.org//wp-content
-      /uploads/20240215172733/3.png`;
+      `https://media.geeksforgeeks.org//wp-content/uploads/20240215172733/3.png`;
     }
     if (wrongGuessCount == 4) {
       hangmanImage.src = 
-      `https://media.geeksforgeeks.org//wp-content
-      /uploads/20240215173815/4.png`;
+      `https://media.geeksforgeeks.org//wp-content/uploads/20240215173815/4.png`;
     }
     if (wrongGuessCount === 5) {
       hangmanImage.src = 
-      `https://media.geeksforgeeks.org//wp-content
-      /uploads/20240215173859/5.png`;
+      `https://media.geeksforgeeks.org//wp-content/uploads/20240215173859/5.png`;
     }
     if (wrongGuessCount === 6) {
       hangmanImage.src =
-      `https://media.geeksforgeeks.org//wp-content
-      /uploads/20240215173931/6.png`;
+      `https://media.geeksforgeeks.org//wp-content/uploads/20240215173931/6.png`;
     }
     // hangmanImage.src = 
     `images/hangman-${wrongGuessCount}.svg`;
