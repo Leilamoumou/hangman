@@ -192,11 +192,9 @@ body {
     align-items: center;
   }
 
-  .hangman-box img {
-    max-width: 200px;
-  }
-
-  .hangman-box h1 {
-    display: none;
-  }
+ .hangman-box canvas {
+    width: 200px;
+    height: 250px;
+    border: 1px solid #000;
+}
 }
