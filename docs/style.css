@@ -37,7 +37,7 @@ body {
   background-color: #5a6175;
   border-radius: 20px;
   color: #ffffff;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 20px linear-gradient(45deg, #ff79a4, #7dbcff);
 }
 
 #timer-display {
@@ -92,6 +92,7 @@ body {
 
 .game-box .guesses-text b {
   color: #ff0000;
+  font-style: italic;
 }
 
 .guesses-box .keyboard {
@@ -119,7 +120,7 @@ body {
   margin: 1px;
   font-size: 1rem;
   font-weight: 600;
-  background: #408e46;
+  background: #aeffb5;
   /* Light red background */
   text-transform: uppercase;
 }
@@ -143,7 +144,7 @@ body {
   align-items: center;
   justify-content: center;
   height: 100%;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgb(164, 190, 255);
   transition: opacity 0.4s ease;
 }
 
@@ -178,7 +179,7 @@ body {
 }
 
 .game-modal p b {
-  color: #e90e0e;
+  color: #ff6a6a;
   /* Dark green color */
   font-size: 20px;
   font-weight: 600;
