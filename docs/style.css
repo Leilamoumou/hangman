@@ -35,7 +35,7 @@ body {
   width: 60%;
   margin-left: 40px;
   padding: 12px 20px;
-  linear-gradient(45deg, #ff8db1, #bbdcff);
+  background: linear-gradient(45deg, #ff8db1, #bbdcff);
   border-radius: 20px;
   box-shadow: 0 0 20px,  #7dbcff;
 }
