@@ -204,10 +204,10 @@ body {
 }
 .category-box {
   background: linear-gradient(45deg, #ff8db1, #bbdcff);
-  max-width: 40px;
+ background-size: contain;
   justify-items: center; 
   align-items: start;
   text-align: center;
   border-radius: 20px;
-  padding: 30px;
+  padding: 15px;
 }
