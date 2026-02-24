@@ -1,6 +1,9 @@
 # Hangman Web-app 
 _Original Template: GeeksforGeeks - Hangman Game_
-Implemented via the following languages: HTML, CSS, JS.
+
+
+**Implemented via the following languages: HTML, CSS, JS.**
+
 I decided to work on this project to enhance my capability of enhancing preexisting code, which would help further my skills in doing so beyond projects as well as refine my own!
 
 ## Altered/Added Features && Functionality
