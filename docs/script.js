@@ -12,7 +12,7 @@ const playAgainBtn =
     document.querySelector(".play-again");
 const timerDisplay = 
     document.querySelector(".timer");
-
+/*
 const codingQuiz = [
   {
     word: "variable",
@@ -54,7 +54,32 @@ const codingQuiz = [
     word: "syntax",
     hint: "The rules that govern the structure of statements in a programming language.",
   },
+];*/
+//new word categories below
+const sillyQuiz = [
+  {
+    word: "meow",
+    hint: "Live by the cat, die by the cat. ≽(•⩊ •マ≼ ",
+  },
+{
+  word: "coffee",
+  hint: "Every morning, no debate. >𐃷<⭑.ᐟ",
+},
+{
+  word: "goated",
+  hint: "When something's great, what is it? ◝(ᵔᗜᵔ)◜",
+},
+{
+  word: "jinx",
+  hint: "You owe me a soda! (ദ്ദി˙ᗜ˙)",
+},
+{
+  word:"fried chicken",
+  hint:"With extra buffalo sauce on the side, please! (๑>◡<๑)",
+},
+
 ];
+//end of 
 
 let currentWord, correctLetters, wrongGuessCount, timerInterval;
 const maxGuesses = 6;
@@ -99,8 +124,8 @@ const resetGame = () => {
 
 const getRandomWord = () => {
   const { word, hint } =
-    codingQuiz[Math.floor(Math.random() 
-    * codingQuiz.length)];
+    sillyQuiz[Math.floor(Math.random() 
+    * sillyQuiz.length)];
   currentWord = word;
   console.log(word);
   document.querySelector(".hint-text b")
