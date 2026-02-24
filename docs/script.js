@@ -125,6 +125,7 @@ const resetGame = () => {
 };
 
 const getRandomWord = (category) => {
+   document.activeElement.blur();
     const selectedCategory = category || 
      Object.keys(wordBank)[Math.floor(Math.random() * Object.keys(wordBank).length)];
   const { word, hint } =
