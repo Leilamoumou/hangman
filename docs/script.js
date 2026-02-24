@@ -75,7 +75,7 @@ const wordBank = {
   hint: "You owe me a soda! (ദ്ദി˙ᗜ˙)",
 },
 {
-  word:"fried chicken",
+  word:"chicken",
   hint:"With extra buffalo sauce on the side, please! (๑>◡<๑)",
 },
 
