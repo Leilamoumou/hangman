@@ -197,7 +197,7 @@ for (let i = 97; i <= 122; i++) {
     initGame(e.target, String.fromCharCode(i))
   );
 }
-getRandomWord(category);
+//getRandomWord(category);
 playAgainBtn.addEventListener("click", () => getRandomWord());
 //keyboard implementation, press for keys- LM
 document.addEventListener("keydown", (e) => {

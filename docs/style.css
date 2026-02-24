@@ -3,7 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Courier New", "Lucida Console", monospace;
-  color:#ff8db1;
+  color:#bbdcff;
 }
 
 .title{
@@ -121,7 +121,7 @@ body {
   font-size: 1rem;
   font-weight: 600;
   background: #ff8db1;
-  /* Light red background */
+  
   text-transform: uppercase;
 }
 
