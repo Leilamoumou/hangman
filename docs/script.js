@@ -202,6 +202,9 @@ for (let i = 97; i <= 122; i++) {
 playAgainBtn.addEventListener("click", () => getRandomWord());
 //keyboard implementation, press for keys- LM
 document.addEventListener("keydown", (e) => {
+  //no crash if typing prior to picking
+  if (!currentWord) return;
+  
   if (e.key.length !== 1 || !e.key.match(/[a-z]/i)) return;
 
     // e.key will give you the letter pressed

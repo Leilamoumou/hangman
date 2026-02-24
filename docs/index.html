@@ -18,35 +18,36 @@
       </div>
     </div>
 
-    <div class="container">
-      <div class="hangman-box">
+   <div class="container">
+    <div class="hangman-box">
         <canvas width="200" height="250"></canvas>
-
         <h1>Hangman Game</h1>
-         <!-- CHOOSE A CATEGORY : D-->
-      <div class="category-box">
-        <h2> Choose a category!</h2>
-    <button onclick="getRandomWord('codingQuiz')">•⩊• coding •⩊•</button>
-    <button onclick="getRandomWord('sillyQuiz')"> ≽(•⩊ •マ≼  silly lingo ≽(•⩊ •マ≼ </button>
-    <button onclick="getRandomWord()">ദ്ദി(ᵔᗜᵔ) random ദ്ദി(ᵔᗜᵔ)</button>
-    </div>
-     <ul class="word-display"></ul>
         <div class="timer">Time left:
-          <span id="timer-display">3:00</span>
+            <span id="timer-display">3:00</span>
         </div>
-      </div>
-      <div class="game-box">
-        <ul class="word-display"></ul>
-        <h4 class="hint-text">
-          Hint:
-          <b></b>
-        </h4>
-        <h4 class="guesses-text">
-          Incorrect guesses:
-          <b>0 / 6</b>
-        </h4>
-        <div class="keyboard"></div>
-      </div>
     </div>
+
+    <div class="game-box">
+        <div class="category-box">
+            <h2>Choose a category!</h2>
+            <div class="category-option">
+                <button onclick="getRandomWord('codingQuiz')">•⩊•</button>
+                <p>coding</p>
+            </div>
+            <div class="category-option">
+                <button onclick="getRandomWord('sillyQuiz')">≥(•ω•)≤</button>
+                <p>silly lingo</p>
+            </div>
+            <div class="category-option">
+                <button onclick="getRandomWord()">ʕ•ᴥ•ʔ</button>
+                <p>random</p>
+            </div>
+        </div>
+        <ul class="word-display"></ul>
+        <h4 class="hint-text">Hint: <b></b></h4>
+        <h4 class="guesses-text">Incorrect guesses: <b>0 / 6</b></h4>
+        <div class="keyboard"></div>
+    </div>
+</div>
   </body>
 </html>
