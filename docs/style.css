@@ -3,7 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Courier New", "Lucida Console", monospace;
-  color:#38252b;
+  color:#ff8db1;
 }
 
 .title{
@@ -199,10 +199,10 @@ body {
  .hangman-box canvas {
     width: 200px;
     height: 250px;
-    border: 1px solid #000;
+    border: 1px solid #429dff;
 }
 }
-.category-box {
+.category-container {
   background: linear-gradient(45deg, #ff8db1, #bbdcff);
  background-size: contain;
   justify-items: center; 
