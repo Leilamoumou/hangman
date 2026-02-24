@@ -1,5 +1,6 @@
 # Hangman Web-app 
 _Original Template: GeeksforGeeks - Hangman Game_
+Implemented via the following languages: HTML,CSS,JS.
 
 ## Altered/Added Features && Functionality
 **Alterations**
