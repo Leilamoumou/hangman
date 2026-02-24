@@ -161,7 +161,6 @@ body {
   max-width: 420px;
   width: 50%;
   text-align: center;
-  color :#429dff;
   border-radius: 20px;
   padding: 30px;
 }
@@ -173,6 +172,7 @@ body {
 
 .game-modal h4 {
   font-size: 1.5rem;
+  color :#429dff;
 }
 
 .game-modal p {
