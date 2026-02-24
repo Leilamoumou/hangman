@@ -11,3 +11,4 @@ I altered the entire CSS styling, including positioning, font styles, and the ov
 **Additions**
 
 I added another word bank, sorted the two by category, and altered the js file, allowing users to either pick between the two categories or let the game decide for them!
+I also integrated a simple CI/CD file to maintain the practice of such. 
