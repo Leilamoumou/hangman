@@ -12,9 +12,9 @@ const playAgainBtn =
     document.querySelector(".play-again");
 const timerDisplay = 
     document.querySelector(".timer");
-const wordBank ={
+const wordBank = { 
 
-const codingQuiz = [
+ codingQuiz: [
   {
     word: "variable",
     hint: "A placeholder for a value.",
@@ -57,7 +57,7 @@ const codingQuiz = [
   },
 ],
 //new word categories below
-const sillyQuiz = [
+ sillyQuiz: [
   {
     word: "meow",
     hint: "Live by the cat, die by the cat. ≽(•⩊ •マ≼ ",
