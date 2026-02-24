@@ -12,7 +12,8 @@ const playAgainBtn =
     document.querySelector(".play-again");
 const timerDisplay = 
     document.querySelector(".timer");
-/*
+const wordBank ={
+
 const codingQuiz = [
   {
     word: "variable",
@@ -54,7 +55,7 @@ const codingQuiz = [
     word: "syntax",
     hint: "The rules that govern the structure of statements in a programming language.",
   },
-];*/
+],
 //new word categories below
 const sillyQuiz = [
   {
@@ -78,8 +79,9 @@ const sillyQuiz = [
   hint:"With extra buffalo sauce on the side, please! (๑>◡<๑)",
 },
 
-];
+]
 //end of 
+};
 
 let currentWord, correctLetters, wrongGuessCount, timerInterval;
 const maxGuesses = 6;
@@ -122,15 +124,14 @@ const resetGame = () => {
   gameModal.classList.remove("show");
 };
 
-const getRandomWord = () => {
+const getRandomWord = (category) => {
+    const selectedCategory = category || 
+     Object.keys(wordBank)[Math.floor(Math.random() * Object.keys(wordBank).length)];
   const { word, hint } =
-    sillyQuiz[Math.floor(Math.random() 
-    * sillyQuiz.length)];
-  currentWord = word;
-  console.log(word);
-  document.querySelector(".hint-text b")
-  .innerText = hint;
-  resetGame();
+    wordBank[selectedCategory][Math.floor(Math.random() * wordBank[selectedCategory].length)];
+    currentWord = word;
+    document.querySelector(".hint-text b").innerText = hint;
+    resetGame();
 };
 
 const startTimer = () => {
